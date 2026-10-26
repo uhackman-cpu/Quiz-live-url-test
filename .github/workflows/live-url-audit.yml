@@ -1,0 +1,31 @@
+name: Quiz Live URL Audit
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "40 2 * * 1"
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run live website audit
+        run: python scripts/live_audit.py --base https://lagale.in/ --max-pages 1600 --delay 0.25 --out reports
+      - name: Commit report files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/
+          git diff --cached --quiet || (git commit -m "Update live website audit report" && git push)
+      - name: Upload audit report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: quiz-live-url-audit-report
+          path: reports/
+          if-no-files-found: warn
