@@ -69,6 +69,10 @@ def main():
     sitemap_urls={normalize(urllib.parse.urljoin(sitemap_url,re.sub("&amp;","&",v.strip()))) for v in raw_locs}
     sitemap_urls={u for u in sitemap_urls if u}
     queue=deque([base]); queued={base}; visited=set(); rows=[]; link_rows=[]; disallowed=0
+    # Seed sitemap URLs so entries not linked from navigation are still checked.
+    for sitemap_url_candidate in sorted(sitemap_urls):
+        if urllib.parse.urlsplit(sitemap_url_candidate).netloc == host and sitemap_url_candidate not in queued:
+            queue.append(sitemap_url_candidate); queued.add(sitemap_url_candidate)
 
     while queue and len(visited)<args.max_pages:
         url=normalize(queue.popleft())
