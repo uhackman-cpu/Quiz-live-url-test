@@ -1,13 +1,13 @@
 # Lagale Live URL Audit
 
-- Started: 2026-10-26 03:52:16 UTC
+- Started: 2026-11-02 03:25:38 UTC
 - Base URL: https://lagale.in/
 - robots.txt HTTP status: 200 ()
 - sitemap.xml HTTP status: 200 ()
-- Sitemap URLs parsed: 1239
-- URLs crawled: 1239 (configured cap: 1600)
-- Successful HTML pages: 1239
-- Internal links recorded: 19459
+- Sitemap URLs parsed: 1306
+- URLs crawled: 1306 (configured cap: 1600)
+- Successful HTML pages: 1306
+- Internal links recorded: 20479
 - robots-disallowed candidates skipped: 0
 
 ## Summary
@@ -17,7 +17,7 @@
 | HTTP errors or request failures | 0 |
 | Redirecting URLs | 0 |
 | Canonical review candidates | 0 |
-| HTML pages without canonical | 0 |
+| HTML pages without canonical | 4 |
 | HTML pages without title | 0 |
 | HTML pages without H1 | 0 |
 | Successful crawled URLs absent from sitemap | 0 |
