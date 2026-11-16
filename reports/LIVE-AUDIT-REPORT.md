@@ -1,23 +1,23 @@
 # Lagale Live URL Audit
 
-- Started: 2026-11-09 03:24:44 UTC
+- Started: 2026-11-16 03:40:10 UTC
 - Base URL: https://lagale.in/
 - robots.txt HTTP status: 200 ()
 - sitemap.xml HTTP status: 200 ()
 - Sitemap URLs parsed: 1307
 - URLs crawled: 1307 (configured cap: 1600)
-- Successful HTML pages: 1305
-- Internal links recorded: 20492
+- Successful HTML pages: 1307
+- Internal links recorded: 20534
 - robots-disallowed candidates skipped: 0
 
 ## Summary
 
 | Check | Count |
 |---|---:|
-| HTTP errors or request failures | 2 |
+| HTTP errors or request failures | 0 |
 | Redirecting URLs | 0 |
 | Canonical review candidates | 0 |
-| HTML pages without canonical | 2 |
+| HTML pages without canonical | 1 |
 | HTML pages without title | 0 |
 | HTML pages without H1 | 0 |
 | Successful crawled URLs absent from sitemap | 0 |
@@ -25,10 +25,7 @@
 
 ## HTTP errors / request failures
 
-| http_status | url | final_url | error |
-|---|---|---|---|
-| 503 | https://lagale.in/subject-wise-notes/computer/software-1/ | https://lagale.in/subject-wise-notes/computer/software-1/ | HTTP Error 503: Service Unavailable |
-| 503 | https://lagale.in/subject-wise-notes/economy/economy-introduction-2/ | https://lagale.in/subject-wise-notes/economy/economy-introduction-2/ | HTTP Error 503: Service Unavailable |
+No findings.
 
 ## Redirects
 
